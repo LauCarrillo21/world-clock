@@ -82,8 +82,11 @@ setInterval(updateTime, 1000);
 
 //Multiple locations
 function updateCity (event) {
-    //update location and time
-    let cityTimeZone = event.target.value;
+     //update location and time
+     let cityTimeZone = event.target.value;
+    if(cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+    }   
      //improve city name
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
