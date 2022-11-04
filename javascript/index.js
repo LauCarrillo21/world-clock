@@ -41,6 +41,38 @@ parisDateElement.innerHTML = parisTime.format("dddd, MMMM Do YYYY");
 //Modify time using innerHTML
 parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>] A [</small>]");
 } 
+
+//Hawaii
+// Select the city
+let hawaiiElement = document.querySelector("#hawaii");
+if (hawaiiElement) {
+//Select the date
+let hawaiiDateElement = hawaiiElement.querySelector(".date");
+//Select the time
+let hawaiiTimeElement = hawaiiElement.querySelector(".time");
+//Select Time Zone Moment
+let hawaiiTime = moment().tz("Pacific/Honolulu");
+//Modify date using innerHTML
+hawaiiDateElement.innerHTML = hawaiiTime.format("dddd, MMMM Do YYYY");
+//Modify time using innerHTML
+hawaiiTimeElement.innerHTML = hawaiiTime.format("h:mm:ss [<small>] A [</small>]");
+}
+
+//Berlin
+// Select the city
+let berlinElement = document.querySelector("#berlin");
+if (berlinElement) {
+//Select the date
+let berlinDateElement = berlinElement.querySelector(".date");
+//Select the time
+let berlinTimeElement = berlinElement.querySelector(".time");
+//Select Time Zone Moment
+let berlinTime = moment().tz("Europe/Berlin");
+//Modify date using innerHTML
+berlinDateElement.innerHTML = berlinTime.format("dddd, MMMM Do YYYY");
+//Modify time using innerHTML
+berlinTimeElement.innerHTML = berlinTime.format("h:mm:ss [<small>] A [</small>]");
+}
 }
 // Call the function
 updateTime();
