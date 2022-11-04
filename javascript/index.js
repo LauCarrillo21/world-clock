@@ -1,3 +1,11 @@
+//Change color theme
+function changeTheme() {
+    let body = document.querySelector("body");
+    body.classList.toggle("dark");
+}
+
+let themeButton = document.querySelector(".theme-button");
+themeButton.addEventListener("click",changeTheme);
 // create a function that covers all the cities
 function updateTime() {
 //Los Angeles
